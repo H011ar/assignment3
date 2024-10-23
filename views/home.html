@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Solutions</title>
+    <link href="/css/main.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar bg-base-100">
+        <div class="flex-1">
+            <a href="/" class="btn btn-ghost normal-case text-xl">Climate Solutions</a>
+        </div>
+        <div class="flex-none">
+            <ul class="menu menu-horizontal p-0">
+                <li><a href="/about">About</a></li>
+                <li tabindex="0" class="dropdown">
+                    <!-- Updated to use dropdown -->
+                    <label tabindex="0" class="btn btn-ghost">Sector</label>
+                    <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a href="/solutions/projects?sector=agriculture">Agriculture</a></li>
+                        <li><a href="/solutions/projects?sector=industry">Industry</a></li>
+                        <li><a href="/solutions/projects?sector=energy">Energy</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="container mx-auto">
+        <div class="hero min-h-screen bg-base-200">
+            <div class="hero-content text-center">
+                <div class="max-w-md">
+                    <h1 class="text-5xl font-bold">Explore Our Projects</h1>
+                    <p class="py-6">Discover innovative climate solutions that aim to make the world a better place.</p>
+                    <a href="/solutions/projects" class="btn btn-primary">View Projects</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!-- Card 1 -->
+            <div class="card bg-base-100 shadow-xl">
+                <figure><img src="https://example.com/project1.jpg" alt="Project 1 Image"/></figure>
+                <div class="card-body">
+                    <h2 class="card-title">Project Title 1</h2>
+                    <p>Short summary of Project 1...</p>
+                    <a href="/solutions/projects/1" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="card bg-base-100 shadow-xl">
+                <figure><img src="https://example.com/project2.jpg" alt="Project 2 Image"/></figure>
+                <div class="card-body">
+                    <h2 class="card-title">Project Title 2</h2>
+                    <p>Short summary of Project 2...</p>
+                    <a href="/solutions/projects/2" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card bg-base-100 shadow-xl">
+                <figure><img src="https://example.com/project3.jpg" alt="Project 3 Image"/></figure>
+                <div class="card-body">
+                    <h2 class="card-title">Project Title 3</h2>
+                    <p>Short summary of Project 3...</p>
+                    <a href="/solutions/projects/3" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
