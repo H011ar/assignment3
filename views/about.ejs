@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link href="/css/main.css" rel="stylesheet">
+</head>
+<body>
+    
+    <%- include('partials/navbar', { page: '/about' }) %>  <!-- Include navbar -->
+
+    <nav class="navbar bg-base-100">
+        <div class="flex-1">
+            <a href="/" class="btn btn-ghost normal-case text-xl">Climate Solutions</a>
+        </div>
+        <div class="flex-none">
+            <ul class="menu menu-horizontal p-0">
+                <li><a href="/">Home</a></li>
+                <li><a class="active" href="/about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mx-auto">
+        <div class="hero min-h-screen bg-base-200">
+            <div class="hero-content flex-col lg:flex-row">
+                <img src=https://asset.gecdesigns.com/img/wallpapers/hyper-realistic-beautiful-girl-ai-generated-image-sr14062403-cover.webp class="max-w-sm rounded-lg shadow-2xl" alt="Your Image">
+                <div>
+                    <h1 class="text-5xl font-bold">About Me</h1>
+                    <p class="py-6">The journey of a web developer often begins with learning the foundational languages of the web: HTML (for structure), CSS (for styling), and JavaScript (for interactivity). Starting with these basics, a developer learns how to create static websites, understanding layout, design, and how users interact with content on the screen.
+
+                        As they progress, developers dive into frontend frameworks like React, Vue, or Angular to build more complex and dynamic applications. They also learn about responsive design to ensure sites look good on any device.
+                        
+                        Eventually, many web developers start exploring backend development—the server side of web applications. This involves learning languages and frameworks like Node.js, Python with Django, or Ruby on Rails, and understanding databases like MySQL or MongoDB. With these tools, they can create full-fledged web applications that store and manage data, handle user authentication, and communicate between the frontend and backend.
+                        
+                        Advanced skills in version control (using tools like Git), deployment, and APIs further prepare web developers to work collaboratively in teams, manage code changes, and push their projects live on the internet.
+                        
+                        In time, they gain expertise in building, maintaining, and optimizing complex applications, mastering problem-solving and continuous learning to keep up with new tools and trends. A web developer’s journey is marked by constant growth, creativity, and adapting to evolving technology.
+                        
+                        
+                        
+                        
+                        
+                        
+                        </p>
+
+                        
+                        <a href="/" class="btn btn-primary">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
