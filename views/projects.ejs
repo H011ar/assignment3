@@ -1,54 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Details</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Climate Solutions</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body tabindex="-1">
+ 
     <%- include('partials/navbar', { page: '/solutions/projects' }) %>
-    <!-- Navbar -->
-
+    <br />
     <div class="container mx-auto">
-        <div class="hero bg-primary text-primary-content p-6 flex flex-col items-center text-center">
-            <h1><%= project.title %></h1>
-            <p>Below, you will find detailed information about the project: <%= project.title %></p>
-        </div>
 
-        <div class="p-6">
-            <img src="<%= project.feature_img_url %>" alt="Project Image" class="w-full max-w-sm mx-auto rounded">
-            <h2 class="text-lg font-bold mt-4">Introduction</h2>
-            <p><%= project.intro_short %></p>
-
-            <h2 class="text-lg font-bold mt-4">Impact</h2>
-            <p><%= project.impact %></p>
-
-            <h2 class="text-lg font-bold mt-4">More Information</h2>
-            <a href="<%= project.original_source_url %>" target="_blank" class="btn btn-primary">Visit Source</a>
-
-            <h2 class="text-lg font-bold mt-4">Quote of the Day</h2>
-            <blockquote id="quote" class="italic"></blockquote>
-            <footer id="author" class="text-right mt-2"></footer>
-
-            <div class="mt-6">
-                <a href="#" onclick="history.back(); return false;" class="btn btn-secondary">Go Back</a>
+      <div class="hero bg-base-200 rounded-lg p-6">
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-5xl font-bold">Projects</h1>
+            <p class="py-6">Discover the solutions we offer across various sectors.</p>
+   
+            <div class="sector-filters">
+              <a href="/solutions/projects?sector=Industry" class="btn btn-primary">Industry</a>
+              <a href="/solutions/projects?sector=Transportation" class="btn btn-primary">Transportation</a>
+              <a href="/solutions/projects?sector=Energy" class="btn btn-primary">Energy</a>
+              <a href="/solutions/projects?sector=Water" class="btn btn-primary">Water</a>
             </div>
+          </div>
         </div>
-    </div>
+      </div>
+      <br />
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            fetch("https://dummyjson.com/quotes/random")
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById("quote").textContent = `"${data.quote}"`;
-                    document.getElementById("author").textContent = `- ${data.author}`;
-                })
-                .catch(err => {
-                    console.error("Error fetching quote:", err);
-                });
-        });
-    </script>
-</body>
+      <table class="table w-full">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Sector</th>
+            <th>Summary</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <% projects.forEach(project => { %>
+          <tr>
+            <td><%= project.title %></td>
+            <td>
+              <a href="/solutions/projects?sector=<%= project.sector %>" class="btn btn-secondary"
+                ><%= project.sector %></a
+              >
+            </td>
+            <td><%= project.summary_short %></td>
+            <td><a href="/solutions/projects/<%= project.id %>" class="btn btn-info">Details</a></td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+  </body>
 </html>
+
